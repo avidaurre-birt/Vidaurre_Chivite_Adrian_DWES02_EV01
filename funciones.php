@@ -58,12 +58,12 @@ function validaFechas($fecha, $duracion)
     //Valida que la fecha de inicio de reserva no es anterior a la fecha actual
     if ($fechaInicio < $fechaActual) {
         $error = "CON ERRORES";
-        $errores[] = "Debes introducir una fecha de inicio de alquiler valida";
+        $errores[] = "ERROR. Debes introducir una fecha de inicio de alquiler valida";
     }
     //Valida que la duración es un número entre 1 y 30
-    if ($duracion < 1 || $duracion > 30) {
+    elseif ($duracion < 1 || $duracion > 30) {
         $error = "CON ERRORES";
-        $errores[] = "La duracion debe estar entre 1 y 30 dias";
+        $errores[] = "ERROR. La duracion debe estar entre 1 y 30 dias";
     } else {
         $error = "CORRECTA";
         $errores = [];
